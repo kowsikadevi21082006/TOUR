@@ -1,0 +1,87 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+
+    &>.login-content {
+        max-width: 750px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        &>.left {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &>img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
+
+        &>.right {
+            width: fit-content;
+            position: relative;
+            background-color: var(--orange);
+            color: white;
+            padding: 40px 60px;
+
+            &>.floating-icon {
+                position: absolute;
+                --x: 80px;
+                top: calc(var(--x) / -2);
+                height: var(--x);
+                width: var(--x);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                font-size: 2.3rem;
+                left: 50%;
+                translate: -50% 0;
+                background-color: white;
+                color: var(--orange);
+            }
+
+            &>.form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                margin: 20px 0;
+                min-width: 230px;
+                text-align: center;
+
+                &>*{
+                    width: 100%;
+                }
+
+                &>input{
+                    background-color: #fffc;
+                    /* color: white; */
+                }
+
+                &>.go-to-login{
+                    font-size: small;
+
+                    &>.link{
+                        color: #333;
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

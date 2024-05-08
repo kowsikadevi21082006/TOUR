@@ -1,0 +1,30 @@
+.my-bookings{
+    max-width: var(--page-max-width);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+
+    &>.forms{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+        &>.form{
+            border: 1px solid gold;
+            border-radius: 25px;
+            padding: 50px;
+            
+            &>table{
+                & th, td{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow: hidden;
+
+    &>[class^="section-"] {
+        max-width: var(--page-max-width);
+        width: 100%;
+        margin: auto;
+        padding: 30px;
+    }
+
+    & .heading-label{
+        font-family: baystar;
+        background-color: var(--orange);
+        padding: 10px 20px;
+        width: fit-content;
+        border-radius: 20px;
+    }
+
+}
