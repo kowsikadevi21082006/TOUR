@@ -1,0 +1,446 @@
+/*! ./ */
+
+/*! ./application */
+
+/*! ./authentication */
+
+/*! ./axios */
+
+/*! ./base */
+
+/*! ./base.js */
+
+/*! ./compose.js */
+
+/*! ./core */
+
+/*! ./debug */
+
+/*! ./declarations */
+
+/*! ./events */
+
+/*! ./fetch */
+
+/*! ./formats */
+
+/*! ./hooks */
+
+/*! ./hooks.js */
+
+/*! ./implementation */
+
+/*! ./lib/client */
+
+/*! ./parse */
+
+/*! ./populate-header */
+
+/*! ./regular.js */
+
+/*! ./service */
+
+/*! ./shams */
+
+/*! ./storage */
+
+/*! ./stringify */
+
+/*! ./superagent */
+
+/*! ./util.inspect */
+
+/*! ./utils */
+
+/*! ./utils.js */
+
+/*! ./version */
+
+/*! @feathersjs/authentication-client */
+
+/*! @feathersjs/commons */
+
+/*! @feathersjs/errors */
+
+/*! @feathersjs/feathers */
+
+/*! @feathersjs/hooks */
+
+/*! @feathersjs/rest-client */
+
+/*! @feathersjs/socketio-client */
+
+/*! @feathersjs/transport-commons/client */
+
+/*! call-bind/callBound */
+
+/*! define-data-property */
+
+/*! es-define-property */
+
+/*! es-errors */
+
+/*! es-errors/eval */
+
+/*! es-errors/range */
+
+/*! es-errors/ref */
+
+/*! es-errors/syntax */
+
+/*! es-errors/type */
+
+/*! es-errors/uri */
+
+/*! events */
+
+/*! function-bind */
+
+/*! get-intrinsic */
+
+/*! gopd */
+
+/*! has-property-descriptors */
+
+/*! has-proto */
+
+/*! has-symbols */
+
+/*! hasown */
+
+/*! object-inspect */
+
+/*! qs */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
+/*! set-function-length */
+
+/*! side-channel */
+
+/*!*************************!*\
+        !*** ./src/feathers.ts ***!
+        \*************************/
+
+/*!******************************!*\
+        !*** ../errors/lib/index.js ***!
+        \******************************/
+
+/*!*******************************!*\
+        !*** ../commons/lib/debug.js ***!
+        \*******************************/
+
+/*!*******************************!*\
+        !*** ../commons/lib/index.js ***!
+        \*******************************/
+
+/*!********************************!*\
+        !*** ../feathers/lib/hooks.js ***!
+        \********************************/
+
+/*!********************************!*\
+        !*** ../feathers/lib/index.js ***!
+        \********************************/
+
+/*!********************************!*\
+        !*** ./util.inspect (ignored) ***!
+        \********************************/
+
+/*!*********************************!*\
+        !*** ../feathers/lib/events.js ***!
+        \*********************************/
+
+/*!**********************************!*\
+        !*** ../feathers/lib/service.js ***!
+        \**********************************/
+
+/*!**********************************!*\
+        !*** ../feathers/lib/version.js ***!
+        \**********************************/
+
+/*!**********************************!*\
+        !*** ../rest-client/lib/base.js ***!
+        \**********************************/
+
+/*!***********************************!*\
+        !*** ../rest-client/lib/axios.js ***!
+        \***********************************/
+
+/*!***********************************!*\
+        !*** ../rest-client/lib/fetch.js ***!
+        \***********************************/
+
+/*!***********************************!*\
+        !*** ../rest-client/lib/index.js ***!
+        \***********************************/
+
+/*!**************************************!*\
+        !*** ../feathers/lib/application.js ***!
+        \**************************************/
+
+/*!**************************************!*\
+        !*** ../transport-commons/client.js ***!
+        \**************************************/
+
+/*!***************************************!*\
+        !*** ../feathers/lib/declarations.js ***!
+        \***************************************/
+
+/*!***************************************!*\
+        !*** ../socketio-client/lib/index.js ***!
+        \***************************************/
+
+/*!****************************************!*\
+        !*** ../../node_modules/gopd/index.js ***!
+        \****************************************/
+
+/*!****************************************!*\
+        !*** ../rest-client/lib/superagent.js ***!
+        \****************************************/
+
+/*!******************************************!*\
+        !*** ../../node_modules/hasown/index.js ***!
+        \******************************************/
+
+/*!******************************************!*\
+        !*** ../../node_modules/qs/lib/index.js ***!
+        \******************************************/
+
+/*!******************************************!*\
+        !*** ../../node_modules/qs/lib/parse.js ***!
+        \******************************************/
+
+/*!******************************************!*\
+        !*** ../../node_modules/qs/lib/utils.js ***!
+        \******************************************/
+
+/*!******************************************!*\
+        !*** ../transport-commons/lib/client.js ***!
+        \******************************************/
+
+/*!*******************************************!*\
+        !*** ../../node_modules/es-errors/ref.js ***!
+        \*******************************************/
+
+/*!*******************************************!*\
+        !*** ../../node_modules/es-errors/uri.js ***!
+        \*******************************************/
+
+/*!*******************************************!*\
+        !*** ../../node_modules/events/events.js ***!
+        \*******************************************/
+
+/*!********************************************!*\
+        !*** ../../node_modules/es-errors/eval.js ***!
+        \********************************************/
+
+/*!********************************************!*\
+        !*** ../../node_modules/es-errors/type.js ***!
+        \********************************************/
+
+/*!********************************************!*\
+        !*** ../../node_modules/qs/lib/formats.js ***!
+        \********************************************/
+
+/*!********************************************!*\
+        !*** ../authentication-client/lib/core.js ***!
+        \********************************************/
+
+/*!*********************************************!*\
+        !*** ../../node_modules/call-bind/index.js ***!
+        \*********************************************/
+
+/*!*********************************************!*\
+        !*** ../../node_modules/es-errors/index.js ***!
+        \*********************************************/
+
+/*!*********************************************!*\
+        !*** ../../node_modules/es-errors/range.js ***!
+        \*********************************************/
+
+/*!*********************************************!*\
+        !*** ../../node_modules/has-proto/index.js ***!
+        \*********************************************/
+
+/*!*********************************************!*\
+        !*** ../authentication-client/lib/index.js ***!
+        \*********************************************/
+
+/*!**********************************************!*\
+        !*** ../../node_modules/es-errors/syntax.js ***!
+        \**********************************************/
+
+/*!**********************************************!*\
+        !*** ../../node_modules/qs/lib/stringify.js ***!
+        \**********************************************/
+
+/*!***********************************************!*\
+        !*** ../../node_modules/has-symbols/index.js ***!
+        \***********************************************/
+
+/*!***********************************************!*\
+        !*** ../../node_modules/has-symbols/shams.js ***!
+        \***********************************************/
+
+/*!***********************************************!*\
+        !*** ../authentication-client/lib/storage.js ***!
+        \***********************************************/
+
+/*!************************************************!*\
+        !*** ../../node_modules/side-channel/index.js ***!
+        \************************************************/
+
+/*!*************************************************!*\
+        !*** ../../node_modules/call-bind/callBound.js ***!
+        \*************************************************/
+
+/*!*************************************************!*\
+        !*** ../../node_modules/function-bind/index.js ***!
+        \*************************************************/
+
+/*!*************************************************!*\
+        !*** ../../node_modules/get-intrinsic/index.js ***!
+        \*************************************************/
+
+/*!**************************************************!*\
+        !*** ../../node_modules/object-inspect/index.js ***!
+        \**************************************************/
+
+/*!***************************************************!*\
+        !*** ../authentication-client/lib/hooks/index.js ***!
+        \***************************************************/
+
+/*!******************************************************!*\
+        !*** ../../node_modules/es-define-property/index.js ***!
+        \******************************************************/
+
+/*!*******************************************************!*\
+        !*** ../../node_modules/set-function-length/index.js ***!
+        \*******************************************************/
+
+/*!********************************************************!*\
+        !*** ../../node_modules/define-data-property/index.js ***!
+        \********************************************************/
+
+/*!**********************************************************!*\
+        !*** ../../node_modules/function-bind/implementation.js ***!
+        \**********************************************************/
+
+/*!***********************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/base.js ***!
+        \***********************************************************/
+
+/*!************************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/hooks.js ***!
+        \************************************************************/
+
+/*!************************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/index.js ***!
+        \************************************************************/
+
+/*!************************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/utils.js ***!
+        \************************************************************/
+
+/*!************************************************************!*\
+        !*** ../../node_modules/has-property-descriptors/index.js ***!
+        \************************************************************/
+
+/*!************************************************************!*\
+        !*** ../authentication-client/lib/hooks/authentication.js ***!
+        \************************************************************/
+
+/*!*************************************************************!*\
+        !*** ../authentication-client/lib/hooks/populate-header.js ***!
+        \*************************************************************/
+
+/*!**************************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/compose.js ***!
+        \**************************************************************/
+
+/*!**************************************************************!*\
+        !*** ../../node_modules/@feathersjs/hooks/script/regular.js ***!
+        \**************************************************************/
+
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * use-sync-external-store-with-selector.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @remix-run/router v1.15.3
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router DOM v6.22.3
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router v6.22.3
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
