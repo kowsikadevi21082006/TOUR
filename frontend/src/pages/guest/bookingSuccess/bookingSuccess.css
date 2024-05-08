@@ -1,0 +1,20 @@
+.booking-success{
+    padding: 100px;
+    
+    &>.content{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        &>img{
+            width: 400px;
+        }
+        & .highlight{
+            color: var(--orange);
+        }
+    }
+
+}

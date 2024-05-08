@@ -1,0 +1,57 @@
+.section-3{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+
+    &>*{
+        width: calc(25%);
+    }
+
+    &>[class^="box-"]{
+        padding: 50px 30px;
+        border-radius: 15px;
+        border: 1px solid gold;
+        border-top: none;
+        border-left: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+
+        &>.icon{
+            background-color: var(--orange);
+            color: white;
+            font-size: 2rem;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &>.title{
+            font-weight: bold;
+        }
+
+        &>.content{
+            font-weight: light;
+            color: #666;
+        }
+    }
+
+    &>.intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        padding: 10px;
+        
+        &>.title{
+            font-family: baystar;
+            color: plum;
+        }
+
+    }
+}

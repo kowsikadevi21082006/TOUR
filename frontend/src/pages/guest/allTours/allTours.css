@@ -1,0 +1,49 @@
+.all-tours{
+    
+
+    &>.video-card{
+        position: relative;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>h1{
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
+        }
+
+        &>video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+    &>.all-tours-content{
+        max-width: var(--page-max-width);
+        margin: auto;
+
+        &>.cards{
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            
+            &>.card{
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+    
+        }
+    }
+
+}
